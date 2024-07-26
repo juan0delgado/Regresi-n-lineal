@@ -1,4 +1,4 @@
 # Regresi-n-lineal
-#Integrantes 
+# Integrantes 
 -Camila Ariza 
 -Juan David Delgado Burbano
