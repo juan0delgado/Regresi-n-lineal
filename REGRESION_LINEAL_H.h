@@ -6,9 +6,9 @@
 using namespace std;
 
 struct Datos {
-    vector<double> x;
-    vector<double> y;
-    int n;
+   vector<double> x;
+   vector<double> y;
+   int n; 
 };
 
 Datos* crearDatos(int n);
