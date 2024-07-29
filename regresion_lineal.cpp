@@ -15,22 +15,23 @@ Datos* crearDatos(int n) {
 void liberarDatos(Datos* datos) {
     delete datos;
 }
-void calcularRegresion(Datos* datos, double& m, double& b, double alpha, int epochs) {
+void calcularRegresion (Datos* datos, double& m, double& b, double alpha, int epochs)
     m = 0.0;
     b = 0.0;
-    
-    ofstream mseFile("mse.txt");
 
-    for (int epoch = 0; epoch < epochs; ++epoch) {
+    ofstream mseFile ("mse.txt");
+   
+    for (int epoch = 0; epoch < epochs; ++epoch){ 
         double mse = 0.0;
-        for (int i = 0; i < datos->n; ++i) {
-            double y_pred = m * datos->x[i] + b;
+        for (int i = 0; i < datos->; ++i){ 
+            double y_pred = m * datos->x[i]+b;
             double error = datos->y[i] - y_pred;
             m += alpha * error * datos->x[i];
             b += alpha * error;
             mse += error * error;
-            
-        }
+       
+    }   
+}
 
         mse /= datos->n;
         mseFile << mse << endl;
