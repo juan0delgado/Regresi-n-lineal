@@ -29,8 +29,7 @@ void calcularRegresion (Datos* datos, double& m, double& b, double alpha, int ep
             m += alpha * error * datos->x[i];
             b += alpha * error;
             mse += error * error;
-       
-    }   
+          
 }
 
         mse /= datos->n;
